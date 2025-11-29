@@ -482,7 +482,11 @@
                 <span style="font-size: 16px;">PET FOOD DONATIONS ONLY</span>
             </div>
         </div>
-        
+        <!-- Photo Popup Modal -->
+<div id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px;" onclick="closePhoto()">
+    <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closePhoto()">&times;</span>
+    <img id="modalImage" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+</div>
         <!-- Countdown Timer -->
         <div class="countdown">
             <div class="countdown-label">Campaign Ends In:</div>
@@ -715,7 +719,7 @@
     <script>
         // Calculate days left
         window.addEventListener('load', function() {
-            const endDate = new Date('December 28, 2024');
+            const endDate = new Date('2024-12-28T23:59:59');
             const today = new Date();
             const daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
             document.getElementById('daysLeft').textContent = daysLeft > 0 ? daysLeft : 0;
@@ -744,7 +748,18 @@
         });
         
         // Handle photo uploads
-                
+                // Make photos clickable to enlarge
+document.querySelectorAll('.photo-grid img').forEach(function(img) {
+    img.style.cursor = 'pointer';
+    img.onclick = function() {
+        document.getElementById('photoModal').style.display = 'flex';
+        document.getElementById('modalImage').src = this.src;
+    };
+});
+
+function closePhoto() {
+    document.getElementById('photoModal').style.display = 'none';
+}
         // Prevent zoom on double tap (iOS)
         let lastTouchEnd = 0;
         document.addEventListener('touchend', function(event) {
