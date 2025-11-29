@@ -538,55 +538,31 @@
         
         <!-- Photo Gallery - Last Year's Success -->
         <div class="photo-gallery">
-            <div class="card-header">
-                <span class="card-icon">📸</span>
-                <span class="card-title">Last Year's 80kg Success!</span>
-            </div>
-            <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
-                Proof of our amazing community support!
-            </p>
-            <div class="photo-grid">
-                <div class="photo-placeholder" style="position: relative;">
-                    <input type="file" accept="image/*" onchange="loadPhoto(event, 1)">
-                    <div id="photoText1">
-                        📷<br>
-                        Tap to add<br>
-                        Door-to-door
-                    </div>
-                    <img id="photo1" style="display: none; width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 0;">
-                </div>
-                
-                <div class="photo-placeholder" style="position: relative;">
-                    <input type="file" accept="image/*" onchange="loadPhoto(event, 2)">
-                    <div id="photoText2">
-                        📷<br>
-                        Tap to add<br>
-                        Food bags
-                    </div>
-                    <img id="photo2" style="display: none; width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 0;">
-                </div>
-                
-                <div class="photo-placeholder" style="position: relative;">
-                    <input type="file" accept="image/*" onchange="loadPhoto(event, 3)">
-                    <div id="photoText3">
-                        📷<br>
-                        Tap to add<br>
-                        Delivery
-                    </div>
-                    <img id="photo3" style="display: none; width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 0;">
-                </div>
-                
-                <div class="photo-placeholder" style="position: relative;">
-                    <input type="file" accept="image/*" onchange="loadPhoto(event, 4)">
-                    <div id="photoText4">
-                        📷<br>
-                        Tap to add<br>
-                        80kg achieved!
-                    </div>
-                    <img id="photo4" style="display: none; width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 0;">
-                </div>
-            </div>
+    <div class="card-header">
+        <span class="card-icon">📸</span>
+        <span class="card-title">Last Year's 80kg Success!</span>
+    </div>
+    <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
+        Proof of our amazing community support!
+    </p>
+    <div class="photo-grid">
+        <div class="photo-placeholder" style="overflow: hidden;">
+            <img src="photo1.jpg" alt="Door-to-door collection" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
         </div>
+        
+        <div class="photo-placeholder" style="overflow: hidden;">
+            <img src="photo2.jpg" alt="Food bags collected" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+        </div>
+        
+        <div class="photo-placeholder" style="overflow: hidden;">
+            <img src="photo3.jpg" alt="Delivery to food bank" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+        </div>
+        
+        <div class="photo-placeholder" style="overflow: hidden;">
+            <img src="photo4.jpg" alt="80kg achievement" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+        </div>
+    </div>
+</div>
         
         <!-- Quick Contact - Mobile Optimized -->
         <div class="mobile-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
@@ -768,19 +744,7 @@
         });
         
         // Handle photo uploads
-        function loadPhoto(event, photoNum) {
-            const file = event.target.files[0];
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('photo' + photoNum).src = e.target.result;
-                    document.getElementById('photo' + photoNum).style.display = 'block';
-                    document.getElementById('photoText' + photoNum).style.display = 'none';
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-        
+                
         // Prevent zoom on double tap (iOS)
         let lastTouchEnd = 0;
         document.addEventListener('touchend', function(event) {
