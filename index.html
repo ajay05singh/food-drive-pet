@@ -469,7 +469,7 @@
         <!-- Header -->
         <div class="mobile-header">
             <h1>🐾 Paws for a Cause 🐾</h1>
-            <p style="color: #667eea; font-size: 18px;">Pet Food Drive by Myrah</p>
+            <p style="color: #667eea; font-size: 22px; font-weight: bold;">Pet Food Drive by Myrah</p>
             <div class="achievement-badge">
                 ⭐ Last Year: 80 KILOS Collected! ⭐
             </div>
@@ -646,12 +646,12 @@
                 </div>
             </div>
             
-            <div style="background: #fff3cd; padding: 12px; border-radius: 10px; margin-top: 15px; text-align: center;">
-                <p style="color: #856404; font-weight: bold; margin: 0; font-size: 14px;">
-                    ✅ Unopened packages only<br>
-                    ✅ Check expiration dates
-                </p>
-            </div>
+            <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center; border: 2px solid #ffc107;">
+    <p style="color: #856404; font-weight: bold; margin: 0; font-size: 18px;">
+        ✅ Unopened packages only<br>
+        ✅ Check expiration dates
+    </p>
+</div>
         </div>
         
         <!-- Shelters -->
@@ -727,14 +727,14 @@
             // Animate progress bars
             setTimeout(() => {
                 // Update these values as campaign progresses
-                const foodProgress = 0; // kg collected
+                const foodProgress = 5; // kg collected
                 const foodGoal = 160;
                 const foodPercentage = (foodProgress / foodGoal) * 100;
                 document.getElementById('foodProgressBar').style.width = foodPercentage + '%';
                 document.getElementById('foodProgressBar').textContent = foodProgress + 'kg';
                 document.getElementById('kgCollected').textContent = foodProgress;
                 
-                const runProgress = 0; // km completed
+                const runProgress = 1.5; // km completed
                 const runGoal = 100;
                 const runPercentage = (runProgress / runGoal) * 100;
                 document.getElementById('challengeProgressBar').style.width = runPercentage + '%';
