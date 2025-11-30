@@ -483,8 +483,7 @@
             </div>
         </div>
         <!-- Photo Popup Modal -->
-<div id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px;" onclick="closePhoto()">
-    <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closePhoto()">&times;</span>
+<div id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; padding: 20px;" onclick="closePhoto()">    <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closePhoto()">&times;</span>
     <img id="modalImage" style="max-width: 90%; max-height: 90%; object-fit: contain;">
 </div>
         <!-- Countdown Timer -->
@@ -691,13 +690,6 @@
         
         <!-- Share - WITH NEW MESSAGE -->
         <div class="qr-section">
-            <h3 style="color: #764ba2; margin-bottom: 10px;">I Need Your Help!</h3>
-            <p style="color: #666; margin-bottom: 15px; font-size: 15px; line-height: 1.6;">
-                <strong>Please share this campaign!</strong><br>
-                We need YOUR help to spread this website and get more food donations. 
-                Every share helps a hungry pet! 🐾
-            </p>
-           <div class="qr-section">
     <h3 style="color: #764ba2; margin-bottom: 10px;">I Need Your Help!</h3>
     <p style="color: #666; margin-bottom: 15px; font-size: 15px;">
         <strong>Please share this campaign!</strong><br>
@@ -707,6 +699,7 @@
     <p style="color: #764ba2; font-size: 14px; font-weight: bold;">
         https://ajay05singh.github.io/food-drive-pet/
     </p>
+</div>
 </div>
         
         <!-- Footer -->
