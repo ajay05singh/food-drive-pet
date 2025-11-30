@@ -700,7 +700,6 @@
         https://ajay05singh.github.io/food-drive-pet/
     </p>
 </div>
-</div>
         
         <!-- Footer -->
         <div class="mobile-footer">
@@ -712,7 +711,7 @@
     <script>
         // Calculate days left
         window.addEventListener('load', function() {
-            const endDate = new Date('2024-12-28T23:59:59');
+            const endDate = new Date('2025-12-28T23:59:59');
             const today = new Date();
             const daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
             document.getElementById('daysLeft').textContent = daysLeft > 0 ? daysLeft : 0;
