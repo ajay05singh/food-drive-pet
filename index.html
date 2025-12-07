@@ -158,7 +158,7 @@
             font-size: 14px;
         }
         
-        /* 100km Challenge Card - BIGGER */
+        /* 160km Challenge Card - BIGGER */
         .challenge-card {
             background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
             color: white;
@@ -493,20 +493,20 @@
             <div class="countdown-label">Days (Dec 28)</div>
         </div>
         
-        <!-- MY 100KM CHALLENGE - BIG AND MOTIVATIONAL -->
+        <!-- MY 160KM CHALLENGE - BIG AND MOTIVATIONAL -->
         <div class="challenge-card">
-            <div class="challenge-title">🏃‍♀️ MY 100KM CHALLENGE! 🏃‍♀️</div>
-            <div class="challenge-number">100 KM</div>
+            <div class="challenge-title">🏃‍♀️ MY 160KM CHALLENGE! 🏃‍♀️</div>
+            <div class="challenge-number">160 KM</div>
             <div class="challenge-progress-bar">
                 <div class="challenge-progress-fill" id="challengeProgressBar">0km</div>
             </div>
             <div class="challenge-text">
-                <strong>I'm running/walking 100km to motivate YOU!</strong><br>
+                <strong>I'm running/cycling 160km to motivate YOU!</strong><br>
                 For every donation, I run harder! Help me reach my goal by donating pet food. 
                 Your support keeps me going! 💪
             </div>
             <p style="margin-top: 15px; font-size: 20px; font-weight: bold;">
-                <span id="kmCompleted">0</span> / 100 KM COMPLETED
+                <span id="kmCompleted">0</span> / 160 KM COMPLETED
             </p>
         </div>
         
@@ -726,8 +726,8 @@
                 document.getElementById('foodProgressBar').textContent = foodProgress + 'kg';
                 document.getElementById('kgCollected').textContent = foodProgress;
                 
-                const runProgress = 1.5; // km completed
-                const runGoal = 100;
+                const runProgress = 8.5; // km completed
+                const runGoal = 160;
                 const runPercentage = (runProgress / runGoal) * 100;
                 document.getElementById('challengeProgressBar').style.width = runPercentage + '%';
                 document.getElementById('challengeProgressBar').textContent = runProgress + 'km';
