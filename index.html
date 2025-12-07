@@ -719,7 +719,7 @@
             // Animate progress bars
             setTimeout(() => {
                 // Update these values as campaign progresses
-                const foodProgress = 5; // kg collected
+                const foodProgress = 15; // kg collected
                 const foodGoal = 160;
                 const foodPercentage = (foodProgress / foodGoal) * 100;
                 document.getElementById('foodProgressBar').style.width = foodPercentage + '%';
@@ -734,8 +734,8 @@
                 document.getElementById('kmCompleted').textContent = runProgress;
                 
                 // Update stats
-                document.getElementById('housesVisited').textContent = 0;
-                document.getElementById('donorsCount').textContent = 0;
+                document.getElementById('housesVisited').textContent = 4;
+                document.getElementById('donorsCount').textContent = 3;
             }, 500);
         });
         
