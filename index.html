@@ -585,22 +585,22 @@
             </p>
             
             <div class="contact-grid">
-                <a href="tel:6044461506" class="contact-button">
+                <a href="tel:6044461506" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'phone', 'action': 'call_initiated'});">
                     <span class="contact-button-icon">📱</span>
                     <span>Call: 604-446-1506</span>
                 </a>
                 
-                <a href="sms:6044461506?body=Hi! I have pet food donations for Paws for a Cause!" class="contact-button">
+                <a href="sms:6044461506?body=Hi! I have pet food donations for Paws for a Cause!" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'sms', 'action': 'text_initiated'});">
                     <span class="contact-button-icon">💬</span>
                     <span>Text Message</span>
                 </a>
                 
-                <a href="https://wa.me/16044461506?text=Hi! I have pet food donations for the Paws for a Cause drive!" class="contact-button">
+                <a href="https://wa.me/16044461506?text=Hi! I have pet food donations for the Paws for a Cause drive!" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'whatsapp', 'action': 'whatsapp_initiated'});">
                     <span class="contact-button-icon">💚</span>
                     <span>WhatsApp</span>
                 </a>
                 
-                <a href="mailto:rumeetsodhi@outlook.com?subject=Pet Food Donation Pickup Request" class="contact-button">
+                <a href="mailto:rumeetsodhi@outlook.com?subject=Pet Food Donation Pickup Request" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'email', 'action': 'email_initiated'});">
                     <span class="contact-button-icon">📧</span>
                     <span>Email</span>
                 </a>
@@ -748,17 +748,28 @@
         
         // Handle photo uploads
                 // Make photos clickable to enlarge
-document.querySelectorAll('.photo-grid img').forEach(function(img) {
+document.querySelectorAll('.photo-grid img').forEach(function(img, index) {
     img.style.cursor = 'pointer';
     img.onclick = function() {
+        // Track which photo was clicked
+        gtag('event', 'photo_view', {
+            'photo_name': this.alt,
+            'photo_number': index + 1,
+            'action': 'enlarged_photo'
+        });
+        
         document.getElementById('photoModal').style.display = 'flex';
         document.getElementById('modalImage').src = this.src;
     };
 });
 
+// Track when someone closes the photo
 function closePhoto() {
+    gtag('event', 'photo_close', {'action': 'closed_enlarged_photo'});
     document.getElementById('photoModal').style.display = 'none';
 }
+
+
         // Prevent zoom on double tap (iOS)
         let lastTouchEnd = 0;
         document.addEventListener('touchend', function(event) {
@@ -769,5 +780,76 @@ function closePhoto() {
             lastTouchEnd = now;
         }, false);
     </script>
+    <!-- Scroll Tracking -->
+<script>
+// Track how far users scroll
+let scrollMilestones = {25: false, 50: false, 75: false, 100: false};
+
+window.addEventListener('scroll', function() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.scrollHeight;
+    const scrollTop = window.scrollY;
+    const scrollPercent = Math.round((scrollTop + windowHeight) / documentHeight * 100);
+    
+    // Check each milestone
+    if (scrollPercent >= 25 && !scrollMilestones[25]) {
+        gtag('event', 'scroll_depth', {'percent': 25});
+        scrollMilestones[25] = true;
+        console.log('User scrolled 25%');
+    }
+    if (scrollPercent >= 50 && !scrollMilestones[50]) {
+        gtag('event', 'scroll_depth', {'percent': 50});
+        scrollMilestones[50] = true;
+        console.log('User scrolled 50%');
+    }
+    if (scrollPercent >= 75 && !scrollMilestones[75]) {
+        gtag('event', 'scroll_depth', {'percent': 75});
+        scrollMilestones[75] = true;
+        console.log('User scrolled 75%');
+    }
+    if (scrollPercent >= 95 && !scrollMilestones[100]) {
+        gtag('event', 'scroll_depth', {'percent': 100});
+        scrollMilestones[100] = true;
+        console.log('User scrolled to bottom');
+    }
+});
+    <!-- Section Time Tracking -->
+<script>
+// Track time spent viewing important sections
+const sectionsToTrack = [
+    {element: '.challenge-card', name: 'challenge_section'},
+    {element: '.progress-container', name: 'progress_section'},
+    {element: '.photo-gallery', name: 'photo_gallery'},
+    {element: '.contact-grid', name: 'contact_section'}
+];
+
+sectionsToTrack.forEach(section => {
+    const element = document.querySelector(section.element);
+    if (!element) return;
+    
+    let startTime = null;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !startTime) {
+                // User started viewing this section
+                startTime = Date.now();
+            } else if (!entry.isIntersecting && startTime) {
+                // User stopped viewing this section
+                const timeSpent = Math.round((Date.now() - startTime) / 1000);
+                if (timeSpent > 2) { // Only track if viewed for more than 2 seconds
+                    gtag('event', 'section_engagement', {
+                        'section_name': section.name,
+                        'time_seconds': timeSpent
+                    });
+                }
+                startTime = null;
+            }
+        });
+    }, {threshold: 0.5}); // Trigger when 50% of section is visible
+    
+    observer.observe(element);
+});
+</script>
 </body>
 </html>
