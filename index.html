@@ -2,13 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP3TR6ZEF4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VP3TR6ZEF4');
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -165,7 +158,7 @@
             font-size: 14px;
         }
         
-        /* 160km Challenge Card - BIGGER */
+        /* 100km Challenge Card - BIGGER */
         .challenge-card {
             background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
             color: white;
@@ -476,7 +469,7 @@
         <!-- Header -->
         <div class="mobile-header">
             <h1>🐾 Paws for a Cause 🐾</h1>
-            <p style="color: #667eea; font-size: 22px; font-weight: bold;">Pet Food Drive by Myrah</p>
+            <p style="color: #667eea; font-size: 18px;">Pet Food Drive by Myrah</p>
             <div class="achievement-badge">
                 ⭐ Last Year: 80 KILOS Collected! ⭐
             </div>
@@ -489,10 +482,13 @@
                 <span style="font-size: 16px;">PET FOOD DONATIONS ONLY</span>
             </div>
         </div>
+        
         <!-- Photo Popup Modal -->
-<div id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; padding: 20px;" onclick="closePhoto()">    <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closePhoto()">&times;</span>
-    <img id="modalImage" style="max-width: 90%; max-height: 90%; object-fit: contain;">
-</div>
+        <div id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; padding: 20px;" onclick="closePhoto()">
+            <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closePhoto()">&times;</span>
+            <img id="modalImage" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+        </div>
+        
         <!-- Countdown Timer -->
         <div class="countdown">
             <div class="countdown-label">Campaign Ends In:</div>
@@ -530,7 +526,7 @@
                     <div class="progress-bar" id="foodProgressBar">0kg</div>
                 </div>
                 <div class="progress-text">
-                    <span id="kgCollected">0</span>kg collected
+                    <span id="kgCollected">0</span>kg collected (Double last year!)
                 </div>
             </div>
             
@@ -548,72 +544,116 @@
         
         <!-- Photo Gallery - Last Year's Success -->
         <div class="photo-gallery">
-    <div class="card-header">
-        <span class="card-icon">📸</span>
-        <span class="card-title">Last Year's 80kg Success!</span>
-    </div>
-    <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
-        Proof of our amazing community support!
-    </p>
-    <div class="photo-grid">
-        <div class="photo-placeholder" style="overflow: hidden;">
-            <img src="photo1.jpg" alt="Door-to-door collection" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
-        </div>
-        
-        <div class="photo-placeholder" style="overflow: hidden;">
-            <img src="photo2.jpg" alt="Food bags collected" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
-        </div>
-        
-        <div class="photo-placeholder" style="overflow: hidden;">
-            <img src="photo3.jpg" alt="Delivery to food bank" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
-        </div>
-        
-        <div class="photo-placeholder" style="overflow: hidden;">
-            <img src="photo4.jpg" alt="80kg achievement" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
-        </div>
-    </div>
-</div>
-
-<!-- MY 160KM CHALLENGE PROGRESS PHOTOS -->
-<div class="photo-gallery">
-    <div class="card-header">
-        <span class="card-icon">🏃‍♀️</span>
-        <span class="card-title">My 160km Challenge Journey!</span>
-    </div>
-    <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
-        Watch my progress - Running & Cycling for the pets! 🚴‍♀️
-    </p>
-    <div class="photo-grid">
-        <!-- Photo 1 - Your current photo -->
-        <div class="photo-placeholder" style="overflow: hidden;">
-            <img src="challenge1.jpg" alt="Challenge Day 1 - Starting strong!" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
-        </div>
-        
-        <!-- Photo 2 - Placeholder for now -->
-        <div class="photo-placeholder">
-            <div style="text-align: center; padding: 20px;">
-                <span style="font-size: 40px;">🏃‍♀️</span>
-                <p style="font-size: 12px; color: #4caf50; margin-top: 10px;">Coming Soon</p>
+            <div class="card-header">
+                <span class="card-icon">📸</span>
+                <span class="card-title">Last Year's 80kg Success!</span>
+            </div>
+            <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
+                Proof of our amazing community support!
+            </p>
+            <div class="photo-grid">
+                <div class="photo-placeholder" style="overflow: hidden;">
+                    <img src="photo1.jpg" alt="Door-to-door collection" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+                </div>
+                
+                <div class="photo-placeholder" style="overflow: hidden;">
+                    <img src="photo2.jpg" alt="Food bags collected" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+                </div>
+                
+                <div class="photo-placeholder" style="overflow: hidden;">
+                    <img src="photo3.jpg" alt="Delivery to food bank" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+                </div>
+                
+                <div class="photo-placeholder" style="overflow: hidden;">
+                    <img src="photo4.jpg" alt="80kg achievement" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+                </div>
             </div>
         </div>
         
-        <!-- Photo 3 - Placeholder for now -->
-        <div class="photo-placeholder">
-            <div style="text-align: center; padding: 20px;">
-                <span style="font-size: 40px;">🚴‍♀️</span>
-                <p style="font-size: 12px; color: #4caf50; margin-top: 10px;">Coming Soon</p>
+        <!-- MY 160KM CHALLENGE PROGRESS PHOTOS -->
+        <div class="photo-gallery">
+            <div class="card-header">
+                <span class="card-icon">🏃‍♀️</span>
+                <span class="card-title">My 160km Challenge Journey!</span>
+            </div>
+            <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
+                Watch my progress - Running & Cycling for the pets! 🚴‍♀️
+            </p>
+            <div class="photo-grid">
+                <!-- Photo 1 - Your current photo -->
+                <div class="photo-placeholder" style="overflow: hidden;">
+                    <img src="challenge1.jpg" alt="Challenge Day 1 - Starting strong!" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+                </div>
+                
+                <!-- Photo 2 - Placeholder for now -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">🏃‍♀️</span>
+                        <p style="font-size: 12px; color: #4caf50; margin-top: 10px;">Coming Soon</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 - Placeholder for now -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">🚴‍♀️</span>
+                        <p style="font-size: 12px; color: #4caf50; margin-top: 10px;">Coming Soon</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 - Placeholder for now -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">🏆</span>
+                        <p style="font-size: 12px; color: #4caf50; margin-top: 10px;">Goal: 160km!</p>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <!-- Photo 4 - Placeholder for now -->
-        <div class="photo-placeholder">
-            <div style="text-align: center; padding: 20px;">
-                <span style="font-size: 40px;">🏆</span>
-                <p style="font-size: 12px; color: #4caf50; margin-top: 10px;">Goal: 160km!</p>
+        <!-- DONATIONS RECEIVED THIS YEAR -->
+        <div class="photo-gallery">
+            <div class="card-header">
+                <span class="card-icon">🎁</span>
+                <span class="card-title">Donations Pouring In!</span>
+            </div>
+            <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
+                Thank you to our amazing donors! Every bag counts! 💝
+            </p>
+            <div class="photo-grid">
+                <!-- Donation Photo 1 -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">📦</span>
+                        <p style="font-size: 12px; color: #764ba2; margin-top: 10px;">Upload Photo 1</p>
+                    </div>
+                </div>
+                
+                <!-- Donation Photo 2 -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">🥫</span>
+                        <p style="font-size: 12px; color: #764ba2; margin-top: 10px;">Upload Photo 2</p>
+                    </div>
+                </div>
+                
+                <!-- Donation Photo 3 -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">🛍️</span>
+                        <p style="font-size: 12px; color: #764ba2; margin-top: 10px;">Upload Photo 3</p>
+                    </div>
+                </div>
+                
+                <!-- Donation Photo 4 -->
+                <div class="photo-placeholder">
+                    <div style="text-align: center; padding: 20px;">
+                        <span style="font-size: 40px;">📸</span>
+                        <p style="font-size: 12px; color: #764ba2; margin-top: 10px;">Upload Photo 4</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
         <!-- Quick Contact - Mobile Optimized -->
         <div class="mobile-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
@@ -626,22 +666,22 @@
             </p>
             
             <div class="contact-grid">
-                <a href="tel:6044461506" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'phone', 'action': 'call_initiated'});">
+                <a href="tel:6044461506" class="contact-button">
                     <span class="contact-button-icon">📱</span>
                     <span>Call: 604-446-1506</span>
                 </a>
                 
-                <a href="sms:6044461506?body=Hi! I have pet food donations for Paws for a Cause!" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'sms', 'action': 'text_initiated'});">
+                <a href="sms:6044461506?body=Hi! I have pet food donations for Paws for a Cause!" class="contact-button">
                     <span class="contact-button-icon">💬</span>
                     <span>Text Message</span>
                 </a>
                 
-                <a href="https://wa.me/16044461506?text=Hi! I have pet food donations for the Paws for a Cause drive!" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'whatsapp', 'action': 'whatsapp_initiated'});">
+                <a href="https://wa.me/16044461506?text=Hi! I have pet food donations for the Paws for a Cause drive!" class="contact-button">
                     <span class="contact-button-icon">💚</span>
                     <span>WhatsApp</span>
                 </a>
                 
-                <a href="mailto:rumeetsodhi@outlook.com?subject=Pet Food Donation Pickup Request" class="contact-button" onclick="gtag('event', 'contact_click', {'method': 'email', 'action': 'email_initiated'});">
+                <a href="mailto:rumeetsodhi@outlook.com?subject=Pet Food Donation Pickup Request" class="contact-button">
                     <span class="contact-button-icon">📧</span>
                     <span>Email</span>
                 </a>
@@ -693,12 +733,12 @@
                 </div>
             </div>
             
-            <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center; border: 2px solid #ffc107;">
-    <p style="color: #856404; font-weight: bold; margin: 0; font-size: 18px;">
-        ✅ Unopened packages only<br>
-        ✅ Check expiration dates
-    </p>
-</div>
+            <div style="background: #fff3cd; padding: 12px; border-radius: 10px; margin-top: 15px; text-align: center;">
+                <p style="color: #856404; font-weight: bold; margin: 0; font-size: 14px;">
+                    ✅ Unopened packages only<br>
+                    ✅ Check expiration dates
+                </p>
+            </div>
         </div>
         
         <!-- Shelters -->
@@ -738,16 +778,23 @@
         
         <!-- Share - WITH NEW MESSAGE -->
         <div class="qr-section">
-    <h3 style="color: #764ba2; margin-bottom: 10px;">I Need Your Help!</h3>
-    <p style="color: #666; margin-bottom: 15px; font-size: 15px;">
-        <strong>Please share this campaign!</strong><br>
-        We need YOUR help to spread this website and get more food donations.
-    </p>
-    <img src="qrcode.png" alt="QR Code" style="width: 200px; height: 200px; margin: 20px auto; display: block;">
-    <p style="color: #764ba2; font-size: 14px; font-weight: bold;">
-        https://ajay05singh.github.io/food-drive-pet/
-    </p>
-</div>
+            <h3 style="color: #764ba2; margin-bottom: 10px;">I Need Your Help!</h3>
+            <p style="color: #666; margin-bottom: 15px; font-size: 15px; line-height: 1.6;">
+                <strong>Please share this campaign!</strong><br>
+                We need YOUR help to spread this website and get more food donations. 
+                Every share helps a hungry pet! 🐾
+            </p>
+            <div class="qr-placeholder">
+                <div>
+                    QR Code<br>
+                    <small>Generate after deployment</small>
+                </div>
+            </div>
+            <p style="color: #764ba2; font-size: 14px; font-weight: bold;">[Your website URL]</p>
+            <p style="color: #666; margin-top: 15px; font-size: 14px;">
+                Share via WhatsApp, text, or social media!
+            </p>
+        </div>
         
         <!-- Footer -->
         <div class="mobile-footer">
@@ -759,7 +806,7 @@
     <script>
         // Calculate days left
         window.addEventListener('load', function() {
-            const endDate = new Date('2025-12-28T23:59:59');
+            const endDate = new Date('December 28, 2024');
             const today = new Date();
             const daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
             document.getElementById('daysLeft').textContent = daysLeft > 0 ? daysLeft : 0;
@@ -787,30 +834,34 @@
             }, 500);
         });
         
-        // Handle photo uploads
-                // Make photos clickable to enlarge
-document.querySelectorAll('.photo-grid img').forEach(function(img, index) {
-    img.style.cursor = 'pointer';
-    img.onclick = function() {
-        // Track which photo was clicked
-        gtag('event', 'photo_view', {
-            'photo_name': this.alt,
-            'photo_number': index + 1,
-            'action': 'enlarged_photo'
+        // Make photos clickable to enlarge
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.photo-grid img').forEach(function(img, index) {
+                img.style.cursor = 'pointer';
+                img.onclick = function() {
+                    // Track which photo was clicked
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'photo_view', {
+                            'photo_name': this.alt,
+                            'photo_number': index + 1,
+                            'action': 'enlarged_photo'
+                        });
+                    }
+                    
+                    document.getElementById('photoModal').style.display = 'flex';
+                    document.getElementById('modalImage').src = this.src;
+                };
+            });
         });
         
-        document.getElementById('photoModal').style.display = 'flex';
-        document.getElementById('modalImage').src = this.src;
-    };
-});
-
-// Track when someone closes the photo
-function closePhoto() {
-    gtag('event', 'photo_close', {'action': 'closed_enlarged_photo'});
-    document.getElementById('photoModal').style.display = 'none';
-}
-
-
+        // Track when someone closes the photo
+        function closePhoto() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'photo_close', {'action': 'closed_enlarged_photo'});
+            }
+            document.getElementById('photoModal').style.display = 'none';
+        }
+        
         // Prevent zoom on double tap (iOS)
         let lastTouchEnd = 0;
         document.addEventListener('touchend', function(event) {
@@ -821,76 +872,5 @@ function closePhoto() {
             lastTouchEnd = now;
         }, false);
     </script>
-    <!-- Scroll Tracking -->
-<script>
-// Track how far users scroll
-let scrollMilestones = {25: false, 50: false, 75: false, 100: false};
-
-window.addEventListener('scroll', function() {
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.body.scrollHeight;
-    const scrollTop = window.scrollY;
-    const scrollPercent = Math.round((scrollTop + windowHeight) / documentHeight * 100);
-    
-    // Check each milestone
-    if (scrollPercent >= 25 && !scrollMilestones[25]) {
-        gtag('event', 'scroll_depth', {'percent': 25});
-        scrollMilestones[25] = true;
-        console.log('User scrolled 25%');
-    }
-    if (scrollPercent >= 50 && !scrollMilestones[50]) {
-        gtag('event', 'scroll_depth', {'percent': 50});
-        scrollMilestones[50] = true;
-        console.log('User scrolled 50%');
-    }
-    if (scrollPercent >= 75 && !scrollMilestones[75]) {
-        gtag('event', 'scroll_depth', {'percent': 75});
-        scrollMilestones[75] = true;
-        console.log('User scrolled 75%');
-    }
-    if (scrollPercent >= 95 && !scrollMilestones[100]) {
-        gtag('event', 'scroll_depth', {'percent': 100});
-        scrollMilestones[100] = true;
-        console.log('User scrolled to bottom');
-    }
-});
-    <!-- Section Time Tracking -->
-<script>
-// Track time spent viewing important sections
-const sectionsToTrack = [
-    {element: '.challenge-card', name: 'challenge_section'},
-    {element: '.progress-container', name: 'progress_section'},
-    {element: '.photo-gallery', name: 'photo_gallery'},
-    {element: '.contact-grid', name: 'contact_section'}
-];
-
-sectionsToTrack.forEach(section => {
-    const element = document.querySelector(section.element);
-    if (!element) return;
-    
-    let startTime = null;
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !startTime) {
-                // User started viewing this section
-                startTime = Date.now();
-            } else if (!entry.isIntersecting && startTime) {
-                // User stopped viewing this section
-                const timeSpent = Math.round((Date.now() - startTime) / 1000);
-                if (timeSpent > 2) { // Only track if viewed for more than 2 seconds
-                    gtag('event', 'section_engagement', {
-                        'section_name': section.name,
-                        'time_seconds': timeSpent
-                    });
-                }
-                startTime = null;
-            }
-        });
-    }, {threshold: 0.5}); // Trigger when 50% of section is visible
-    
-    observer.observe(element);
-});
-</script>
 </body>
 </html>
