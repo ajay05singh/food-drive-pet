@@ -498,7 +498,7 @@
 <body>
     <!-- Sticky Help Banner -->
     <div class="sticky-help-banner">
-        🚨 <span>16 DAYS LEFT! Share & help us reach 160kg!</span> 🐾
+        🚨 <span id="bannerDays">-- DAYS LEFT!</span> Share & help us reach 160kg! 🐾
     </div>
     
     <div class="mobile-container">
@@ -816,7 +816,10 @@
             const endDate = new Date('December 28, 2025');
             const today = new Date();
             const daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
+            
+            // Update both the main countdown and the sticky banner
             document.getElementById('daysLeft').textContent = daysLeft > 0 ? daysLeft : 0;
+            document.getElementById('bannerDays').textContent = (daysLeft > 0 ? daysLeft : 0) + ' DAYS LEFT!';
             
             // Animate progress bars
             setTimeout(() => {
