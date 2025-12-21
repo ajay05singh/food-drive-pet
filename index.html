@@ -529,7 +529,7 @@
         <div class="countdown">
             <div class="countdown-label">Campaign Ends In:</div>
             <div class="countdown-number" id="daysLeft">--</div>
-            <div class="countdown-label">Days (Dec 28, 2025)</div>
+            <div class="countdown-label">Days (Jan 4, 2026)</div>
         </div>
         
         <!-- MY 160KM CHALLENGE - COMPACT VERSION -->
@@ -621,7 +621,7 @@
                 
                 <!-- Photo 2 - New milestone reached! -->
                 <div class="photo-placeholder" style="overflow: hidden;">
-                    <img src="challenge2.jpg" alt="40km milestone - Quarter way there!" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
+                    <img src="challenge2.jpg" alt="63 km milestone - Quarter way there!" style="width: 100%; height: 120px; object-fit: cover; border-radius: 10px;">
                 </div>
                 
                 <!-- Photo 3 - Placeholder for now -->
@@ -813,7 +813,7 @@
     <script>
         // Calculate days left
         window.addEventListener('load', function() {
-            const endDate = new Date('December 28, 2025');
+            const endDate = new Date('Jan 4, 2026');
             const today = new Date();
             const daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
             
@@ -824,7 +824,7 @@
             // Animate progress bars
             setTimeout(() => {
                 // Update these values as campaign progresses
-                const foodProgress = 28; // kg collected - UPDATED!
+                const foodProgress = 40; // kg collected - UPDATED!
                 const foodGoal = 160;
                 const foodPercentage = (foodProgress / foodGoal) * 100;
                 document.getElementById('foodProgressBar').style.width = foodPercentage + '%';
