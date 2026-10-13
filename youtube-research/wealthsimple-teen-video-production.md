@@ -78,3 +78,16 @@ Submit in two `generate_video_batch` calls (12 + 8). Each request uses:
 | Seedance 2.0 Mini, 720p, then upscale to 1080p | 15 | **300** + upscale |
 
 You can also make 10 unique clips and reuse each one once (reframed or mirrored), which halves any of these.
+
+---
+
+## 1-minute cut (Seedance 2.0 Mini, 720p)
+
+**Render:** 4 clips × 15s, `seedance_2_0_mini`, `resolution: 720p`, `aspect_ratio: 16:9`, `generate_audio: false`. This costs **60 credits**, plus about **4.6 credits** of `seed_audio` voiceover, so **~65 credits** total (Higgsfield preflight, 2026-10-13).
+
+| # | Time | Narration | Prompt (after the style lock) |
+|---|---|---|---|
+| 1 | 0:00 | Wealthsimple just did something no big Canadian bank has done for kids. Your child gets their own Visa card, earns interest, and you control every dollar from your phone. But there's a catch. | Slow push-in on a teenager's hand pulling a sleek blank mint-green payment card from a jean pocket, light flare, blurred suburban kitchen, then the card turns to camera. |
+| 2 | 0:15 | Here's the thing: it's a bare trust. You're the legal account holder, and the interest is taxed as your income. Your kid gets a prepaid Visa — virtual right away, physical for free — with no foreign exchange fees. | Animated glass vault with a parent silhouette on top and child silhouette inside holding coins; transitions to a phone tap-to-pay at a café terminal with a green success ripple. |
+| 3 | 0:30 | You set the allowance, approve every money request, and set limits by transaction, day, week, or month. It even pays up to 2.25% interest [VERIFY], and you can top it up yourself. | Calendar tiles light up green each Friday dropping coins into a teen's phone; a circular limit dial snaps into place; a savings jar on a windowsill fills with glowing coins. |
+| 4 | 0:45 | The catch: right now only you can send them money — no e-Transfers from grandma yet. Would you give your kid their own card? Tell me in the comments. Not affiliated with Wealthsimple. | A birthday envelope bounces off a soft glass barrier, then a slow pull-back from a family kitchen at dusk, phones glowing on the table, calm wide end-screen shot. |
