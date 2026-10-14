@@ -91,3 +91,22 @@ You can also make 10 unique clips and reuse each one once (reframed or mirrored)
 | 2 | 0:15 | Here's the thing: it's a bare trust. You're the legal account holder, and the interest is taxed as your income. Your kid gets a prepaid Visa — virtual right away, physical for free — with no foreign exchange fees. | Animated glass vault with a parent silhouette on top and child silhouette inside holding coins; transitions to a phone tap-to-pay at a café terminal with a green success ripple. |
 | 3 | 0:30 | You set the allowance, approve every money request, and set limits by transaction, day, week, or month. It even pays up to 2.25% interest [VERIFY], and you can top it up yourself. | Calendar tiles light up green each Friday dropping coins into a teen's phone; a circular limit dial snaps into place; a savings jar on a windowsill fills with glowing coins. |
 | 4 | 0:45 | The catch: right now only you can send them money — no e-Transfers from grandma yet. Would you give your kid their own card? Tell me in the comments. Not affiliated with Wealthsimple. | A birthday envelope bounces off a soft glass barrier, then a slow pull-back from a family kitchen at dusk, phones glowing on the table, calm wide end-screen shot. |
+
+---
+
+## Rendered: free 1-minute version (2026-10-14)
+
+**File:** [wealthsimple-teen-explainer-1min.mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_3KboLGoY6Fl00dAMzKfNI1CUAES/70ee5f41-9046-4636-9225-e8401a258888.mp4). It's 55s, 1920×1080, H.264/AAC, and also in your Higgsfield media library.
+
+**How it was made (no AI-video credits):**
+- **Voice:** Microsoft Edge neural TTS (`en-CA-LiamNeural`), free.
+- **Footage:** Pexels stock clips found through vidIQ's B-roll search (4 vidIQ credits).
+- **Edit:** done with ffmpeg in the Higgsfield cloud sandbox. It has burned-in word-timed captions, yellow headline cards, and a disclaimer footer.
+
+**Pexels credits (paste into the YouTube description):**
+- Gustavo Fring: https://www.pexels.com/video/woman-paying-by-card-at-billing-counter-of-a-store-5103997/
+- Monstera Production: https://www.pexels.com/video/a-father-drinking-coffee-while-her-daughter-is-using-her-phone-7123821/
+- Jack Sparrow: https://www.pexels.com/video/food-man-woman-shopping-4122971/
+- Pavel Danilyuk: https://www.pexels.com/video/woman-looking-at-a-graph-on-her-smartphone-7579912/
+- Towfiqu barbhuiya: https://www.pexels.com/video/pulling-coins-out-of-jar-12033695/
+- Tima Miroshnichenko: https://www.pexels.com/video/family-sitting-on-sofa-together-6321596/ · https://www.pexels.com/video/family-time-in-the-living-room-6324042/
